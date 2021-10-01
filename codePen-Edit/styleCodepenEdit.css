@@ -1,0 +1,72 @@
+img {
+  /* float: left; */
+  width: 100px;
+  height: 100px;
+  /* object-fit: cover; */
+  border: 1px solid black;
+}
+
+.maindiv {
+  /* border: 2px solid black; */
+  /* width: 100px; */
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.maindiv .div1 {
+  display: inline-block;
+  animation: marquee 20s linear infinite;
+}
+
+.maindiv .div2 {
+  display: inline-block;
+  animation: marquee2 20s linear infinite;
+  animation-delay: 10s;
+}
+
+.maindiv:nth-child(even) .div1 {
+  display: inline-block;
+  animation: marqueeEven 20s linear infinite;
+}
+
+.maindiv:nth-child(even) .div2 {
+  display: inline-block;
+  animation: marquee2Even 20s linear infinite;
+  animation-delay: 10s;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee2 {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-200%);
+  }
+}
+
+@keyframes marqueeEven {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes marquee2Even {
+  from {
+    transform: translateX(-200%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
