@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  font-family: "UniversLTPro-Ex";
+  font-size: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.marquee {
+  height: 35px;
+  width: 100%;
+
+  overflow: hidden;
+  position: relative;
+  background-color: #e9e5fb;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 8px 0 4px 0;
+}
+
+/* would need to be adjusted depending on time */
+.marquee .marqueeone {
+  animation: marquee 10s linear infinite;
+}
+
+.marquee .marqueetwo {
+  animation: marquee 10s linear 2.5s infinite;
+}
+
+.marquee .marqueethree {
+  animation: marquee 10s linear 5s infinite;
+}
+
+.marquee .marqueefour {
+  animation: marquee 10s linear 7.5s infinite;
+}
+
+/* even */
+.marquee:nth-child(even) .marqueeone {
+  animation: marquee2 10s linear infinite;
+}
+
+.marquee:nth-child(even) .marqueetwo {
+  animation: marquee2 10s linear 2.5s infinite;
+}
+
+.marquee:nth-child(even) .marqueethree {
+  animation: marquee2 10s linear 5s infinite;
+}
+
+.marquee:nth-child(even) .marqueefour {
+  animation: marquee2 10s linear 7.5s infinite;
+}
+
+/* even out the elements */
+.marquee div {
+  position: absolute;
+  width: 100%;
+  left: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.marquee:hover div {
+  animation-play-state: paused;
+}
+
+/* add delay at the end of animation so you dont start while another div is going */
+@keyframes marquee {
+  0% {
+    left: 100%;
+  }
+  50% {
+    left: -100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+@keyframes marquee2 {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: +100%;
+  }
+  100% {
+    left: +100%;
+  }
+}
