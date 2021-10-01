@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styleCodepen.css" />
+  </head>
+  <body>
+    <section>
+      <div class="maindiv">
+        <div class="div1">&nbsp;Test-1 Test-2 Test-3</div>
+        <div class="div2">&nbsp;Test-1 Test-2 Test-3</div>
+      </div>
+
+      <div class="maindiv">
+        <div class="div1">&nbsp;Test-1 Test-2 Test-3</div>
+        <div class="div2">&nbsp;Test-1 Test-2 Test-3</div>
+      </div>
+
+      <div class="maindiv">
+        <div class="div1">&nbsp;Test-1 Test-2 Test-3</div>
+        <div class="div2">&nbsp;Test-1 Test-2 Test-3</div>
+      </div>
+
+      <div class="maindiv">
+        <div class="div1">&nbsp;Test-1 Test-2 Test-3</div>
+        <div class="div2">&nbsp;Test-1 Test-2 Test-3</div>
+      </div>
+    </section>
+  </body>
+
+  <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+  <script>
+    // It is absolute necessity that div should be smaller than individual text content.
+    $(".maindiv").width($(".div1").width());
+  </script>
+</html>

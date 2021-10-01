@@ -1,0 +1,63 @@
+.maindiv {
+  border: 2px solid black;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.maindiv .div1 {
+  display: inline-block;
+  animation: marquee 10s linear infinite;
+}
+
+.maindiv .div2 {
+  display: inline-block;
+  animation: marquee2 10s linear infinite;
+  animation-delay: 5s;
+}
+
+.maindiv:nth-child(even) .div1 {
+  display: inline-block;
+  animation: marqueeeven 10s linear infinite;
+}
+
+.maindiv:nth-child(even) .div2 {
+  display: inline-block;
+  animation: marquee2even 10s linear infinite;
+  animation-delay: 5s;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee2 {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-200%);
+  }
+}
+
+@keyframes marqueeeven {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes marquee2even {
+  from {
+    transform: translateX(-200%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
