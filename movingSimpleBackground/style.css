@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  /* background-color: orange; */
+  background: url("sample.png");
+  background-size: 140px;
+}
+
+.home {
+  width: 100%;
+  height: 100vh;
+  /* background-color: #ffe0e6; */
+  background: url("../assets/sample.png");
+  background-size: 140px;
+}
